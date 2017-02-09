@@ -5,6 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
+theme: minimal-mistakes-jekyll
+
 # Site Settings
 locale                   : "en"
 title                    : "Coleson"
@@ -79,7 +81,7 @@ analytics:
 author:
   name             : "Jared Coleson"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
+  bio              : "Software Developer in deep East Texas"
   location         : "Texas"
   email            :
   uri              :
@@ -87,7 +89,7 @@ author:
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : https://www.facebook.com/jared.coleson
+  facebook         : jared.coleson
   foursquare       :
   github           :
   google_plus      :
