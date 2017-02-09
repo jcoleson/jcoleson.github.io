@@ -5,8 +5,6 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # `jekyll serve`. If you change this file, please restart the server process.
 
-theme: minimal
-
 # Site Settings
 locale                   : "en"
 title                    : "Coleson"
