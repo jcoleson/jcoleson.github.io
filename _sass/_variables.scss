@@ -57,10 +57,11 @@ $body-color                 : #fff !default;
 $background-color           : transparent !default;
 $code-background-color      : #fafafa !default;
 $code-background-color-dark : $light-gray !default;
-$text-color                 : $dark-gray !default;
-$border-color               : $lighter-gray !default;
+$text-color                 : #000 !default;
+$border-color               : $dark-gray  !default;
+$navbackground-color        : rgba(0,0,0,0.6) !default;
 
-$primary-color              : #7a8288 !default;
+$primary-color              : $light-gray  !default;
 $success-color              : #62c462 !default;
 $warning-color              : #f89406 !default;
 $danger-color               : #ee5f5b !default;

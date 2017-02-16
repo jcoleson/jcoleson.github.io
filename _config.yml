@@ -8,11 +8,11 @@
 locale                   : "en"
 title                    : "Coleson"
 title_separator          : "-"
-name                     : "Jared Coleson"
+name                     : "Coleson's"
 description              : "Family website for the Colesons."
 url                      : "http://www.coleson.net"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "jcoleson/jcoleson.github.io"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -76,17 +76,17 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jared Coleson"
+  name             : "Colesons"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Software Developer in deep East Texas"
-  location         : "Texas"
+  bio              :
+  location         :
   email            :
   uri              :
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
-  facebook         : jared.coleson
+  facebook         : 
   foursquare       :
   github           :
   google_plus      :
@@ -96,7 +96,7 @@ author:
   linkedin         :
   pinterest        :
   soundcloud       :
-  stackoverflow    : 3422/jcoleson # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
+  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. http://stackoverflow.com/users/123456/username)
   steam            :
   tumblr           :
   twitter          :
