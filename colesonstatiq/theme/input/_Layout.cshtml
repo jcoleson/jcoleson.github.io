@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Partial("_partials/_head")
+    @RenderSection("head", required: false)
+</head>
+<body class="main">
+    @Html.Partial("_partials/_header")
+    <div id="site_container">
+        <div class="row">
+            <main id="page_container" role="main">
+                <section>
+                    <div>
+                        <div class="row">
+                            <div>
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                @Html.Partial("_partials/_footer")
+            </main>
+        </div>
+    </div>
+</body>
+</html>
