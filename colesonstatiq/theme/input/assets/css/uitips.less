@@ -1,0 +1,35 @@
+.text-shadow-subtle() { 
+        text-shadow: 0 1px 2px rgba(0,0,0,0.20); 
+}
+
+.text-subtle()  {
+    color: hsl(214, 7%, 47%);
+}
+
+.text-bolder-medium() {
+    font-weight: medium;
+}
+
+.text-bold() {
+    font-weight: bold;
+}
+
+.box-shadow() {
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+}
+
+.text-saturated(@MatchedColor) {
+    color: hsl(hue(@MatchedColor),17%,99%);
+}
+
+.icons-lighter(@MatchedColor) {
+    .far {
+       color: lighten(@MatchedColor,10%)
+    }
+}
+
+.icons-darker(@MatchedColor) {
+    .far {
+       color: darken(@MatchedColor,10%)
+    }
+}

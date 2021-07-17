@@ -1,0 +1,173 @@
+header {
+  background-color: #ededed;
+  color: #454545;
+}
+footer {
+  background-color: #ededed;
+  color: #6b6b6b;
+}
+body {
+  background: #f5f5f5;
+  color: #454545;
+}
+header a {
+  color: #454545;
+  text-decoration: none;
+}
+header a .far {
+  color: #2b2b2b;
+}
+header a:hover {
+  text-decoration: underline;
+}
+a {
+  color: #454545;
+}
+a:hover {
+  color: #d9d9d9;
+}
+body {
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+header {
+  padding: 1rem 1rem 1rem 0rem;
+  height: auto;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+header ul {
+  margin: 0;
+  padding: 0;
+}
+header ul li,
+header ul a {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+main {
+  display: grid;
+}
+footer {
+  padding: 1rem;
+  text-align: center;
+}
+section {
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #ededed;
+  color: #454545;
+  border-radius: 0.5em;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+.cardcontainer {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.cardcontainer .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.5em;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+  background-color: #A68F88;
+}
+.cardcontainer .card p {
+  color: #564b43;
+}
+.cardcontainer .card .visual {
+  height: 100px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+#profile-pic {
+  max-height: 400px;
+}
+#aboutme {
+  display: grid;
+}
+#aboutme #aboutme-main {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+#aboutme .social-icons ul {
+  padding-left: 0;
+  padding-inline-start: 0;
+}
+#aboutme .social-icons li {
+  list-style: none;
+  padding-left: 0;
+  padding-inline-start: 0;
+}
+#aboutme .social-icons a {
+  color: #454545;
+}
+header h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+h1 {
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+h5 {
+  color: #121212;
+  font-style: italic;
+}
+.findme {
+  line-height: 1.5;
+}
+.findme li {
+  position: relative;
+  padding-left: 2rem;
+}
+header {
+  display: grid;
+  grid-template-columns: min-content auto max-content;
+  grid-template-areas: "logo nav user";
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  min-width: 750px;
+  vertical-align: middle;
+}
+header > * {
+  align-self: center;
+}
+header .user {
+  justify-self: end;
+  grid-area: user;
+  display: grid;
+}
+header .nav {
+  justify-content: left;
+  grid-area: nav;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 0.5rem;
+  place-self: left;
+  height: 100%;
+  list-style: none;
+}
+header .nav > li {
+  display: inline-block;
+}
+header .logo {
+  grid-area: logo;
+}
+header a {
+  align-items: center;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}

@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Julius Sans One:100,200,300,400,500,600,700,800');
 /* brands */
 html {
   font-size: 100%;
@@ -22,7 +24,7 @@ h3,
 h4,
 h5 {
   margin: 3rem 0 1.38rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -52,7 +54,7 @@ small,
 }
 .heading-font body {
   background: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   font-weight: 400;
   line-height: 1.75;
   color: black;
@@ -66,7 +68,7 @@ small,
 .heading-font h4,
 .heading-font h5 {
   margin: 3rem 0 1.38rem;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Julius Sans One', sans-serif;
   font-weight: 400;
   line-height: 1.3;
 }
@@ -149,7 +151,6 @@ small,
   clear: both;
   height: auto;
   margin-top: 3em;
-  border-top: 1px solid black;
 }
 #footer .social-icons .fa {
   color: #000;

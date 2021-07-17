@@ -1,4 +1,3 @@
-D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.csprojAssemblyReference.cache
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.GeneratedMSBuildEditorConfig.editorconfig
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.AssemblyInfoInputs.cache
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.AssemblyInfo.cs
@@ -422,3 +421,4 @@ D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.dl
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\ref\colesonstatiq.dll
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.pdb
 D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.genruntimeconfig.cache
+D:\git\github\jcoleson.github.io\colesonstatiq\obj\Debug\net5.0\colesonstatiq.csproj.AssemblyReference.cache

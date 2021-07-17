@@ -1,0 +1,208 @@
+@import "uitips.less";
+
+// Cool Greys
+@color-cool-grey-light: hsl(200,33%,96%);
+@color-cool-grey-med: hsl(200,25%,94%);
+@color-cool-grey-dark: hsl(200,25%,88%);
+@color-cool-med-text: hsl(200,16%,16%);
+@color-cool-dark-text: hsl(200,31%,14%);
+
+// Neutral Greys
+@color-neutral-grey-light: hsl(0,0%,96%);
+@color-neutral-grey-med: hsl(0,0%,93%);
+@color-neutral-grey-dark: hsl(0,0%,85%);
+@color-neutral-med-text: hsl(0,0%,42%);
+@color-neutral-dark-text: hsl(0,0%,27%);
+
+
+// Warm Greys
+@color-warm-grey-light: hsl(24,20%,95%);
+@color-warm-grey-med: hsl(24,21%,93%);
+@color-warm-grey-dark: hsl(24,9%,82%);
+@color-warm-med-text: hsl(24,12%,30%);
+@color-warm-dark-text: hsl(24,24%,11%);
+
+// Color Scheme 
+
+//@color-primary: #E7E3D3;
+//@color-secondary: #800000;
+//@color-tertiary: #A68F88;
+//@color-accent: #766A63;
+//@color-minor: #ED6647;
+
+@color-primary: @color-neutral-grey-light;
+@color-secondary: @color-neutral-grey-med;
+@color-tertiary: #A68F88;
+@color-accent: @color-neutral-grey-dark;
+@color-minor: #ED6647;
+
+
+@color-primary-text: @color-neutral-dark-text;
+@color-secondary-text: @color-neutral-med-text;
+
+header {
+    background-color: @color-secondary;
+    color: @color-primary-text;
+}
+
+footer {
+    background-color: @color-secondary;
+    color: @color-secondary-text;
+}
+
+body {
+    background: @color-primary;
+    color: @color-primary-text;
+}
+
+
+header a {
+    color: @color-primary-text;
+    text-decoration: none;
+    .icons-darker(@color-primary-text);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: @color-primary-text;
+}
+
+a:hover {
+    color: @color-accent;
+}
+
+// Layout 
+
+body {
+    display: grid;
+    margin: 0;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    padding: 1rem 1rem 1rem 0rem;
+    height: auto;
+    .box-shadow;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        li, a {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+main {
+    display: grid;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    
+    margin: 1rem;
+    padding: 1rem;
+    background-color: @color-neutral-grey-med;
+    color: @color-neutral-dark-text;
+    border-radius: 0.5em;
+    .box-shadow;
+}
+
+.cardcontainer {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+        border-radius: 0.5em;
+        .box-shadow;
+        background-color: @color-tertiary;
+
+        p {
+            color: @color-warm-med-text;
+        }
+        .visual {
+            height: 100px;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+    }
+}
+
+#profile-pic {
+    max-height: 400px;
+}
+
+#aboutme {
+    display: grid;
+    
+    #aboutme-main {
+        display: grid;
+        grid-template-columns: minmax(150px, 25%) 1fr;
+    }
+
+    .social-icons {
+        ul {
+            padding-left: 0;
+            padding-inline-start: 0;
+        }
+
+        li {
+            list-style: none;
+            padding-left: 0;
+            padding-inline-start: 0;
+        }
+
+        a {
+            color: @color-primary-text;
+        }
+    }
+}
+
+// Text 
+
+header h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+}
+
+h1 {
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h5 {
+    color: darken(@color-primary-text,20%);
+    font-style: italic;
+}
+
+// Special styling 
+
+.findme {
+    li {
+        position: relative;
+        padding-left: 2rem;
+    }
+
+    line-height: 1.5;
+}
+
+// Menu 
+@import "navmenu-logo-menucenter-user.less";
+
