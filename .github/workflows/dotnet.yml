@@ -16,7 +16,12 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore colesonstatiq
+    - name: echo
+      env: 
+        JCOLESON_TOKEN: ${{ secrets.JCOLESON_TOKEN }}
+      run: echo $JCOLESON_TOKEN
     - name: Build
       env: 
         JCOLESON_TOKEN: ${{ secrets.JCOLESON_TOKEN }}
+      run: echo $JCOLESON_TOKEN
       run: dotnet run deploy --project colesonstatiq -l error -s GitHubToken=$JCOLESON_TOKEN
