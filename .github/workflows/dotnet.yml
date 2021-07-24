@@ -18,4 +18,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore colesonstatiq
     - name: Build
-      run: dotnet run deploy --project colesonstatiq -l error -s GitHubToken="${{JCOLESON_TOKEN}}"
+      run: dotnet run deploy --project colesonstatiq -l error -s GitHubToken="${{env.JCOLESON_TOKEN}}"
