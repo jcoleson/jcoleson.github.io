@@ -33,3 +33,13 @@
        color: darken(@MatchedColor,10%)
     }
 }
+
+.gridautofit(@minpx,@gridgap) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(@minpx, 1fr));
+    grid-gap: @gridgap;
+}
+
+.rounded-image {
+  border-radius: 50%;
+}

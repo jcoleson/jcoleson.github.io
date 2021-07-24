@@ -31,13 +31,13 @@
 //@color-minor: #ED6647;
 
 @color-primary: @color-neutral-grey-light;
-@color-secondary: @color-neutral-grey-med;
+@color-secondary:black;
 @color-tertiary: #A68F88;
 @color-accent: @color-neutral-grey-dark;
 @color-minor: #ED6647;
 
 
-@color-primary-text: @color-neutral-dark-text;
+@color-primary-text: white;
 @color-secondary-text: @color-neutral-med-text;
 
 header {
@@ -80,7 +80,10 @@ body {
     display: grid;
     margin: 0;
     height: 100vh;
-    grid-template-rows: auto 1fr auto;
+    background-color: black;
+    //min-width: 400px;
+    max-width: 1500px;
+    
 }
 
 header {
@@ -109,18 +112,19 @@ footer {
 
 section {
     
-    margin: 1rem;
+    //margin: 1rem;
     padding: 1rem;
-    background-color: @color-neutral-grey-med;
-    color: @color-neutral-dark-text;
-    border-radius: 0.5em;
-    .box-shadow;
+    background-color: black;
+    color: @color-primary-text;
+    //border-radius: 0.5em;
+    //.box-shadow;
 }
 
 .cardcontainer {
     display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(3, 1fr);
+    //grid-gap: 1rem;
+    //grid-template-columns: repeat(3, 1fr);
+    .gridautofit(100px,1rem);
 
     .card {
         display: flex;
@@ -131,10 +135,10 @@ section {
         text-align: center;
         border-radius: 0.5em;
         .box-shadow;
-        background-color: @color-tertiary;
+        background-color: lighten(@color-secondary, 10%);
 
         p {
-            color: @color-warm-med-text;
+            color: @color-secondary-text;
         }
         .visual {
             height: 100px;
@@ -151,27 +155,63 @@ section {
 
 #aboutme {
     display: grid;
+    align-items: left;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    @media screen and (min-width: 400px) {
+        background-image: url("../images/jared-coleson-profile.jpg");    
+    }
+    background-size: contain;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+2,1+25 */
+    //background: -moz-linear-gradient(left,  hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 2%, hsla(0,0%,100%,1) 25%, hsla(0,0%,100%,1) 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(left,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,hsla(0,0%,100%,1) 25%,hsla(0,0%,100%,1) 100%); /* Chrome10-25,Safari5.1-6 */
     
-    #aboutme-main {
-        display: grid;
-        grid-template-columns: minmax(150px, 25%) 1fr;
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+    padding: 0;
+
+    #aboutme-content {
+        text-align: right;
+        padding: 2em;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 950px) {
+            background: linear-gradient(to right,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+        @media screen and (min-width: 951px) {
+            background: linear-gradient(to right,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,rgb(0, 0, 0) 400px,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
     }
 
-    .social-icons {
-        ul {
-            padding-left: 0;
-            padding-inline-start: 0;
-        }
+    #aboutme-main {
+        display: grid;
+        align-items: right;
+        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
 
-        li {
-            list-style: none;
-            padding-left: 0;
-            padding-inline-start: 0;
-        }
 
-        a {
-            color: @color-primary-text;
-        }
+}
+ul, li {
+    padding-inline-start:0;
+}
+
+.social-icons {
+    ul {
+        padding-left: 0;
+        padding-inline-start: 0; 
+    }
+
+    li {
+        list-style: none;
+        padding-left: 0;
+        padding-inline-start: 0 !important;
+    }
+
+    a {
+        color: @color-primary-text;
     }
 }
 
@@ -179,6 +219,7 @@ section {
 
 header h1,h2,h3,h4,h5,h6{
     margin-top: 0;
+    text-align: center;
 }
 
 h1 {
@@ -197,7 +238,7 @@ h5 {
 .findme {
     li {
         position: relative;
-        padding-left: 2rem;
+        padding-left: 0;
     }
 
     line-height: 1.5;
@@ -206,3 +247,9 @@ h5 {
 // Menu 
 @import "navmenu-logo-menucenter-user.less";
 
+
+.mobile-only  {
+    @media screen and (min-width: 400px) {
+        display: none;
+    }
+}
