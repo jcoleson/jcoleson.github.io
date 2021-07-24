@@ -1,0 +1,255 @@
+@import "uitips.less";
+
+// Cool Greys
+@color-cool-grey-light: hsl(200,33%,96%);
+@color-cool-grey-med: hsl(200,25%,94%);
+@color-cool-grey-dark: hsl(200,25%,88%);
+@color-cool-med-text: hsl(200,16%,16%);
+@color-cool-dark-text: hsl(200,31%,14%);
+
+// Neutral Greys
+@color-neutral-grey-light: hsl(0,0%,96%);
+@color-neutral-grey-med: hsl(0,0%,93%);
+@color-neutral-grey-dark: hsl(0,0%,85%);
+@color-neutral-med-text: hsl(0,0%,42%);
+@color-neutral-dark-text: hsl(0,0%,27%);
+
+
+// Warm Greys
+@color-warm-grey-light: hsl(24,20%,95%);
+@color-warm-grey-med: hsl(24,21%,93%);
+@color-warm-grey-dark: hsl(24,9%,82%);
+@color-warm-med-text: hsl(24,12%,30%);
+@color-warm-dark-text: hsl(24,24%,11%);
+
+// Color Scheme 
+
+//@color-primary: #E7E3D3;
+//@color-secondary: #800000;
+//@color-tertiary: #A68F88;
+//@color-accent: #766A63;
+//@color-minor: #ED6647;
+
+@color-primary: @color-neutral-grey-light;
+@color-secondary:black;
+@color-tertiary: #A68F88;
+@color-accent: @color-neutral-grey-dark;
+@color-minor: #ED6647;
+
+
+@color-primary-text: white;
+@color-secondary-text: @color-neutral-med-text;
+
+header {
+    background-color: @color-secondary;
+    color: @color-primary-text;
+}
+
+footer {
+    background-color: @color-secondary;
+    color: @color-secondary-text;
+}
+
+body {
+    background: @color-primary;
+    color: @color-primary-text;
+}
+
+
+header a {
+    color: @color-primary-text;
+    text-decoration: none;
+    .icons-darker(@color-primary-text);
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: @color-primary-text;
+}
+
+a:hover {
+    color: @color-accent;
+}
+
+// Layout 
+
+body {
+    display: grid;
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+    //min-width: 400px;
+    max-width: 1500px;
+    
+}
+
+header {
+    padding: 1rem 1rem 1rem 0rem;
+    height: auto;
+    .box-shadow;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        li, a {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+}
+
+main {
+    display: grid;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    
+    //margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: @color-primary-text;
+    //border-radius: 0.5em;
+    //.box-shadow;
+}
+
+.cardcontainer {
+    display: grid;
+    //grid-gap: 1rem;
+    //grid-template-columns: repeat(3, 1fr);
+    .gridautofit(100px,1rem);
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+        text-align: center;
+        border-radius: 0.5em;
+        .box-shadow;
+        background-color: lighten(@color-secondary, 10%);
+
+        p {
+            color: @color-secondary-text;
+        }
+        .visual {
+            height: 100px;
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+
+    }
+}
+
+#profile-pic {
+    max-height: 400px;
+}
+
+#aboutme {
+    display: grid;
+    align-items: left;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    @media screen and (min-width: 400px) {
+        background-image: url("../images/jared-coleson-profile.jpg");    
+    }
+    background-size: contain;
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+2,1+25 */
+    //background: -moz-linear-gradient(left,  hsla(0,0%,100%,0) 0%, hsla(0,0%,100%,0) 2%, hsla(0,0%,100%,1) 25%, hsla(0,0%,100%,1) 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(left,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,hsla(0,0%,100%,1) 25%,hsla(0,0%,100%,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    
+    //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+
+    padding: 0;
+
+    #aboutme-content {
+        text-align: right;
+        padding: 2em;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        @media screen and (max-width: 950px) {
+            background: linear-gradient(to right,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,rgb(0, 0, 0) 40%,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+        @media screen and (min-width: 951px) {
+            background: linear-gradient(to right,  hsla(0,0%,100%,0) 0%,hsla(0,0%,100%,0) 2%,rgb(0, 0, 0) 400px,rgb(0, 0, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        }
+    }
+
+    #aboutme-main {
+        display: grid;
+        align-items: right;
+        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+
+}
+ul, li {
+    padding-inline-start:0;
+}
+
+.social-icons {
+    ul {
+        padding-left: 0;
+        padding-inline-start: 0; 
+    }
+
+    li {
+        list-style: none;
+        padding-left: 0;
+        padding-inline-start: 0 !important;
+    }
+
+    a {
+        color: @color-primary-text;
+    }
+}
+
+// Text 
+
+header h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    text-align: center;
+}
+
+h1 {
+    letter-spacing: -0.025em;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+h5 {
+    color: darken(@color-primary-text,20%);
+    font-style: italic;
+}
+
+// Special styling 
+
+.findme {
+    li {
+        position: relative;
+        padding-left: 0;
+    }
+
+    line-height: 1.5;
+}
+
+// Menu 
+@import "navmenu-logo-menucenter-user.less";
+
+
+.mobile-only  {
+    @media screen and (min-width: 400px) {
+        display: none;
+    }
+}
