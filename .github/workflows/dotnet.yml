@@ -18,4 +18,4 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore colesonstatiq
     - name: Build
-      run: dotnet run --project colesonstatiq --log-level "Error" -- deploy 
+      run: dotnet run deploy --project colesonstatiq -l debug
