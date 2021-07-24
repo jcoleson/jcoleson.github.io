@@ -11,6 +11,7 @@ namespace colesonstatiq
             await Bootstrapper
               .Factory
               .CreateWeb(args)
+              .AddEnvironmentVariables()
               .RunAsync();
     }
 }
