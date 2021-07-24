@@ -19,4 +19,4 @@ jobs:
     - name: Build
       env: 
         JCOLESON_TOKEN: ${{ secrets.JCOLESON_TOKEN }}
-      run: dotnet run deploy --project colesonstatiq -l error -s GitHubToken="$JCOLESON_TOKEN"
+      run: dotnet run deploy --project colesonstatiq -l error -s GitHubToken=$JCOLESON_TOKEN
