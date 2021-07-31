@@ -86,8 +86,17 @@ section {
   width: 100%;
   margin: 0.5rem 0;
 }
+.cardcontainer .card img {
+  max-width: 100%;
+  max-height: 100%;
+}
 #profile-pic {
-  max-height: 400px;
+  max-height: 450px;
+}
+@media screen and (min-width: 450px) {
+  .jared {
+    background-image: url("/assets/images/jared-coleson-profile.jpg");
+  }
 }
 #aboutme {
   display: grid;
@@ -99,17 +108,16 @@ section {
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+2,1+25 */
   padding: 0;
 }
-@media screen and (min-width: 400px) {
-  #aboutme {
-    background-image: url("../images/jared-coleson-profile.jpg");
-  }
-}
 #aboutme #aboutme-content {
   text-align: right;
-  padding: 2em;
   margin: 0;
   height: 100%;
   width: 100%;
+}
+@media screen and (min-width: 450px) {
+  #aboutme #aboutme-content {
+    padding: 2em;
+  }
 }
 @media screen and (max-width: 950px) {
   #aboutme #aboutme-content {
@@ -172,6 +180,9 @@ h5 {
   position: relative;
   padding-left: 0;
 }
+.mobile-profile {
+  width: 225px;
+}
 header {
   display: grid;
   grid-template-columns: min-content auto max-content;
@@ -179,7 +190,6 @@ header {
   gap: 0.5rem;
   padding: 0.5rem;
   width: 100%;
-  min-width: 750px;
   vertical-align: middle;
 }
 header > * {
@@ -212,7 +222,34 @@ header a {
   padding: 0.5rem 1rem;
   text-decoration: none;
 }
-@media screen and (min-width: 400px) {
+@media screen and (max-width: 450px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 2 rem 0 1rem;
+    font-weight: 400;
+    line-height: 1;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 3.209rem;
+  }
+  h2 {
+    font-size: 2.157rem;
+  }
+  h3 {
+    font-size: 1.369rem;
+  }
+  h4 {
+    font-size: 1.777rem;
+  }
+  h5 {
+    font-size: 1.333rem;
+  }
+}
+@media screen and (min-width: 450px) {
   .mobile-only {
     display: none;
   }
